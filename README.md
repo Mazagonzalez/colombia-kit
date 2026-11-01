@@ -55,6 +55,16 @@ Direcciones::parsear('Cra 7 # 45-20 Apto 301');
 // ['tipoVia' => 'Carrera', 'numeroVia' => '7', 'numeroCruce' => '45', 'placa' => '20', 'complemento' => 'Apartamento 301']
 ```
 
+### Laravel
+
+```php
+$request->validate([
+    'nit' => 'required|nit',
+    'ciudad' => 'required|municipio',
+    'direccion' => 'required|direccion',
+]);
+```
+
 Los detalles están en el [README de PHP](php/README.md).
 
 ## Una sola fuente de verdad

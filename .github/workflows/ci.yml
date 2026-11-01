@@ -64,15 +64,24 @@ jobs:
       - run: node scripts/smoke-test.mjs
 
   php:
-    name: PHP ${{ matrix.php }}
+    name: PHP ${{ matrix.php }} (Laravel ${{ matrix.laravel }})
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
       matrix:
         php: ['8.2', '8.3', '8.4', '8.5']
+        laravel: ['11', '12', '13']
+        exclude:
+          # Laravel 13 pide PHP 8.3 o superior.
+          - php: '8.2'
+            laravel: '13'
     defaults:
       run:
         working-directory: php
+    env:
+      # Composer bloquea Laravel 11 por avisos de seguridad sin corregir. Solo se usa para probar
+      # que el paquete funciona con esa versión: Laravel no es una dependencia del paquete.
+      COMPOSER_NO_SECURITY_BLOCKING: ${{ matrix.laravel == '11' && '1' || '' }}
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
@@ -81,7 +90,8 @@ jobs:
         with:
           php-version: ${{ matrix.php }}
           coverage: none
-      - run: composer install --no-interaction --no-progress
+      - run: composer require --dev "laravel/framework:^${{ matrix.laravel }}.0" --no-update --no-interaction
+      - run: composer update --no-interaction --no-progress
       - run: composer formato:verificar
       - run: composer analizar
       - run: composer test
