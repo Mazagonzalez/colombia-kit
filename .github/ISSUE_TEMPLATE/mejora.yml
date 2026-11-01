@@ -1,0 +1,17 @@
+name: Proponer una mejora
+description: Una función nueva, un formato de dirección sin soporte o un cambio en la API.
+labels: [mejora]
+body:
+  - type: textarea
+    id: necesidad
+    attributes:
+      label: Qué necesitas
+      description: El caso real que quieres resolver.
+    validations:
+      required: true
+  - type: textarea
+    id: ejemplos
+    attributes:
+      label: Ejemplos de entrada y salida
+      description: Sirven como base para los fixtures compartidos.
+      render: text

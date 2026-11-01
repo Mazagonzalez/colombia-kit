@@ -1,0 +1,30 @@
+name: Reportar un error
+description: Un resultado incorrecto, un fallo o una diferencia entre JS y PHP.
+labels: [error]
+body:
+  - type: dropdown
+    id: paquete
+    attributes:
+      label: Paquete
+      options:
+        - nit
+        - divipola
+        - direcciones
+        - PHP / Laravel
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Versión
+      placeholder: 1.2.3
+    validations:
+      required: true
+  - type: textarea
+    id: entrada
+    attributes:
+      label: Entrada y resultado
+      description: Qué le pasaste a la función, qué devolvió y qué esperabas. No incluyas datos personales de terceros.
+      render: text
+    validations:
+      required: true
