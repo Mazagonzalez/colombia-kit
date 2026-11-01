@@ -53,6 +53,7 @@ jobs:
           add-paths: |
             data/divipola.json
             packages/divipola/src/generated/**
+            php/resources/data/divipola.json
             .changeset/actualizar-divipola-*.md
 
       # Un solo issue abierto por problema: las ejecuciones siguientes comentan en él.
