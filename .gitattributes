@@ -2,3 +2,4 @@
 *.png binary
 pnpm-lock.yaml linguist-generated=true
 data/divipola.json linguist-generated=true
+packages/*/src/generated/** linguist-generated=true

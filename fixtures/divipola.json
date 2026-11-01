@@ -1,0 +1,150 @@
+{
+  "departamentos": [
+    { "codigo": "05", "nombre": "Antioquia", "nombreOficial": "ANTIOQUIA" },
+    { "codigo": "11", "nombre": "Bogotá, D.C.", "nombreOficial": "BOGOTÁ, D.C." },
+    { "codigo": "44", "nombre": "La Guajira", "nombreOficial": "LA GUAJIRA" },
+    { "codigo": "52", "nombre": "Nariño", "nombreOficial": "NARIÑO" },
+    { "codigo": "54", "nombre": "Norte de Santander", "nombreOficial": "NORTE DE SANTANDER" },
+    { "codigo": "76", "nombre": "Valle del Cauca", "nombreOficial": "VALLE DEL CAUCA" },
+    {
+      "codigo": "88",
+      "nombre": "Archipiélago de San Andrés, Providencia y Santa Catalina",
+      "nombreOficial": "ARCHIPIÉLAGO DE SAN ANDRÉS, PROVIDENCIA Y SANTA CATALINA"
+    }
+  ],
+  "municipios": [
+    {
+      "descripcion": "Antioquia incluye Medellín",
+      "entrada": "05",
+      "contiene": ["05001", "05002"]
+    },
+    {
+      "descripcion": "Bogotá tiene un solo municipio",
+      "entrada": "11",
+      "contiene": ["11001"],
+      "total": 1
+    },
+    {
+      "descripcion": "San Andrés y Providencia",
+      "entrada": "88",
+      "contiene": ["88001", "88564"],
+      "total": 2
+    },
+    { "descripcion": "departamento que no existe", "entrada": "00", "contiene": [], "total": 0 },
+    {
+      "descripcion": "código de municipio en vez de departamento",
+      "entrada": "05001",
+      "contiene": [],
+      "total": 0
+    }
+  ],
+  "buscarMunicipio": [
+    { "descripcion": "sin tilde", "entrada": "medellin", "primero": "05001", "total": 1 },
+    { "descripcion": "con tilde", "entrada": "Medellín", "primero": "05001", "total": 1 },
+    { "descripcion": "en mayúsculas", "entrada": "MEDELLÍN", "primero": "05001", "total": 1 },
+    {
+      "descripcion": "con espacios alrededor",
+      "entrada": "  medellin  ",
+      "primero": "05001",
+      "total": 1
+    },
+    { "descripcion": "parte del nombre", "entrada": "medel", "primero": "05001", "total": 1 },
+    {
+      "descripcion": "la palabra completa va antes que las parciales",
+      "entrada": "cali",
+      "primero": "76001"
+    },
+    { "descripcion": "sin puntuación", "entrada": "bogota dc", "primero": "11001", "total": 1 },
+    { "descripcion": "con puntuación", "entrada": "BOGOTÁ, D.C.", "primero": "11001", "total": 1 },
+    {
+      "descripcion": "la ñ se compara como n",
+      "entrada": "narino",
+      "contiene": ["05483", "25483", "52480"]
+    },
+    { "descripcion": "con ñ", "entrada": "Nariño", "contiene": ["05483", "25483", "52480"] },
+    {
+      "descripcion": "ñ descompuesta",
+      "entrada": "Narin\u0303o",
+      "contiene": ["05483", "25483", "52480"]
+    },
+    {
+      "descripcion": "exactos antes que parciales, aunque su código sea mayor",
+      "entrada": "san andres",
+      "primero": "68669",
+      "contiene": ["88001", "05647"]
+    },
+    {
+      "descripcion": "nombre con guion",
+      "entrada": "piendamo tunia",
+      "primero": "19548",
+      "total": 1
+    },
+    { "descripcion": "sin resultados", "entrada": "xyzzy", "total": 0 },
+    { "descripcion": "búsqueda vacía", "entrada": "", "total": 0 },
+    { "descripcion": "solo espacios", "entrada": "   ", "total": 0 },
+    { "descripcion": "solo puntuación", "entrada": ".,-", "total": 0 },
+    { "descripcion": "null", "entrada": null, "total": 0 },
+    { "descripcion": "número", "entrada": 5001, "total": 0 }
+  ],
+  "porCodigo": [
+    {
+      "descripcion": "municipio",
+      "entrada": "05001",
+      "salida": {
+        "codigo": "05001",
+        "nombre": "Medellín",
+        "nombreOficial": "MEDELLÍN",
+        "tipo": "Municipio",
+        "codigoDepartamento": "05",
+        "departamento": "Antioquia"
+      }
+    },
+    {
+      "descripcion": "municipio con nombre compuesto",
+      "entrada": "76001",
+      "salida": { "nombre": "Santiago de Cali", "departamento": "Valle del Cauca" }
+    },
+    {
+      "descripcion": "tipo isla",
+      "entrada": "88001",
+      "salida": { "nombre": "San Andrés", "tipo": "Isla" }
+    },
+    {
+      "descripcion": "artículo con mayúscula en el nombre",
+      "entrada": "13442",
+      "salida": { "nombre": "María La Baja", "nombreOficial": "MARÍA LA BAJA" }
+    },
+    {
+      "descripcion": "departamento",
+      "entrada": "05",
+      "salida": { "codigo": "05", "nombre": "Antioquia", "nombreOficial": "ANTIOQUIA" }
+    },
+    { "descripcion": "municipio que no existe", "entrada": "99999", "salida": null },
+    { "descripcion": "departamento que no existe", "entrada": "00", "salida": null },
+    { "descripcion": "longitud incorrecta", "entrada": "051", "salida": null },
+    { "descripcion": "sin cero inicial", "entrada": "5001", "salida": null },
+    { "descripcion": "texto vacío", "entrada": "", "salida": null },
+    { "descripcion": "número", "entrada": 5001, "salida": null },
+    { "descripcion": "null", "entrada": null, "salida": null }
+  ],
+  "normalizar": [
+    { "descripcion": "mayúsculas", "entrada": "BOGOTA", "salida": "bogota" },
+    { "descripcion": "tildes", "entrada": "Áéíóú", "salida": "aeiou" },
+    { "descripcion": "diéresis", "entrada": "Güicán", "salida": "guican" },
+    { "descripcion": "eñe", "entrada": "Ñuñoa", "salida": "nunoa" },
+    { "descripcion": "tilde descompuesta", "entrada": "Bogota\u0301", "salida": "bogota" },
+    {
+      "descripcion": "puntos y comas se eliminan",
+      "entrada": "Bogotá, D.C.",
+      "salida": "bogota dc"
+    },
+    {
+      "descripcion": "otros signos separan",
+      "entrada": "Piendamó - Tunía",
+      "salida": "piendamo tunia"
+    },
+    { "descripcion": "espacios repetidos", "entrada": "  San    Andrés  ", "salida": "san andres" },
+    { "descripcion": "números", "entrada": "Zona 5", "salida": "zona 5" },
+    { "descripcion": "caracteres sin equivalente", "entrada": "Łódź", "salida": "od" }
+  ]
+}
