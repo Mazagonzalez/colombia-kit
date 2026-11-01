@@ -15,6 +15,7 @@ const RAIZ = fileURLToPath(new URL('..', import.meta.url));
 const ENCABEZADO = '// Generado por scripts/sincronizar-datos.ts. No editar a mano.\n';
 const DIR_DIVIPOLA = 'packages/divipola/src/generated';
 const DIR_DIRECCIONES = 'packages/direcciones/src/generated';
+const DIR_PHP = 'php/resources/data';
 
 function unionDeTextos(valores: string[]): string {
   return valores.map((valor) => `  | '${valor}'`).join('\n');
@@ -24,8 +25,12 @@ function listaDeRegistros(registros: unknown[]): string {
   return registros.map((registro) => `  ${JSON.stringify(registro)},`).join('\n');
 }
 
+function leerTexto(ruta: string): string {
+  return readFileSync(join(RAIZ, ruta), 'utf8');
+}
+
 function leerJson(ruta: string): unknown {
-  return JSON.parse(readFileSync(join(RAIZ, ruta), 'utf8'));
+  return JSON.parse(leerTexto(ruta));
 }
 
 function archivosGenerados(): Map<string, string> {
@@ -53,6 +58,11 @@ function archivosGenerados(): Map<string, string> {
       `${DIR_DIRECCIONES}/vias.ts`,
       `${ENCABEZADO}export type TipoVia =\n${unionDeTextos(vias.tiposVia.map((t) => t.nombre))};\n\nexport type Cuadrante =\n${unionDeTextos(vias.cuadrantes.map((c) => c.nombre))};\n\nexport const VIAS = ${JSON.stringify(vias, null, 2)};\n`,
     ],
+    // Copias exactas: Packagist solo recibe `php/`, así que no puede leer `data/` ni el LICENSE de la raíz.
+    [`${DIR_PHP}/divipola.json`, leerTexto('data/divipola.json')],
+    [`${DIR_PHP}/normalizacion.json`, leerTexto('data/normalizacion.json')],
+    [`${DIR_PHP}/vias.json`, leerTexto('data/vias.json')],
+    ['php/LICENSE', leerTexto('LICENSE')],
   ]);
 }
 

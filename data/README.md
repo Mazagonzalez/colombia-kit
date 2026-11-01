@@ -8,7 +8,7 @@ Fuente de verdad de los datos del proyecto, independiente del lenguaje. Los paqu
 | `normalizacion.json` | Tabla para comparar textos sin mayúsculas ni tildes | A mano, seguido de `pnpm datos:sincronizar`    |
 | `vias.json`          | Tipos de vía, cuadrantes, marcadores y complementos | A mano, seguido de `pnpm datos:sincronizar`    |
 
-`pnpm datos:sincronizar` regenera las copias de los paquetes, y el CI falla si alguna está desactualizada.
+`pnpm datos:sincronizar` regenera las copias de los paquetes, incluidas las de `php/resources/data/`, y el CI falla si alguna está desactualizada.
 
 ## Licencia y atribución
 
