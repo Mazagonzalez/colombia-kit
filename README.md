@@ -5,7 +5,7 @@
 
 Utilidades open source para desarrolladores que trabajan con datos colombianos: NIT, DIVIPOLA y direcciones. Disponible para JavaScript/TypeScript y para PHP con integración para Laravel, con la misma lógica y los mismos resultados en ambos lenguajes.
 
-> **Estado:** los paquetes de JavaScript/TypeScript ya están publicados en npm. La versión de PHP está en desarrollo, así que su ejemplo muestra la API prevista.
+> **Estado:** los paquetes de JavaScript/TypeScript ya están publicados en npm. La versión de PHP está en desarrollo y todavía no está publicada en Packagist.
 
 ## Por qué existe
 
@@ -43,12 +43,19 @@ parsearDireccion('Cra 7 # 45-20 Apto 301');
 ### PHP
 
 ```php
+use ColombiaKit\Direcciones;
+use ColombiaKit\Divipola;
 use ColombiaKit\Nit;
 
+Nit::calcularDV('800197268'); // 4
 Nit::validar('800.197.268-4'); // true
+
+Divipola::buscarMunicipio('medellin');
+Direcciones::parsear('Cra 7 # 45-20 Apto 301');
+// ['tipoVia' => 'Carrera', 'numeroVia' => '7', 'numeroCruce' => '45', 'placa' => '20', 'complemento' => 'Apartamento 301']
 ```
 
-La API de PHP se definirá en la fase 2 y puede cambiar respecto a este ejemplo.
+Los detalles están en el [README de PHP](php/README.md).
 
 ## Una sola fuente de verdad
 

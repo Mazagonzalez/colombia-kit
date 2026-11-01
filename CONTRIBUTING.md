@@ -26,6 +26,26 @@ pnpm verificar
 
 `pnpm verificar` comprueba que los archivos generados coincidan con `data/` y corre lint, formato, tipos, tests con cobertura (mínimo 90 %), build y la prueba de carga de los paquetes.
 
+### PHP
+
+Para tocar `php/` necesitas además PHP 8.2 o superior y Composer.
+
+```bash
+cd php
+```
+
+```bash
+composer install
+```
+
+```bash
+composer verificar
+```
+
+`composer verificar` corre Pint, PHPStan en nivel máximo, los tests de Pest con los mismos `fixtures/` y una prueba de carga sin extensiones.
+
+Si cambias `data/`, corre `pnpm datos:sincronizar`: también actualiza las copias de `php/resources/data/`.
+
 ## Enviar un cambio
 
 1. Crea una rama desde `main`: nunca se hacen commits directos a `main`.
