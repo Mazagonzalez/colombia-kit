@@ -24,7 +24,7 @@ pnpm install
 pnpm verificar
 ```
 
-`pnpm verificar` corre lint, formato, tipos, tests con cobertura (mínimo 90 %), build y la prueba de carga de los paquetes.
+`pnpm verificar` comprueba que los archivos generados coincidan con `data/` y corre lint, formato, tipos, tests con cobertura (mínimo 90 %), build y la prueba de carga de los paquetes.
 
 ## Enviar un cambio
 
