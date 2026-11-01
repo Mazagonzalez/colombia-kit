@@ -1,6 +1,6 @@
 {
   "name": "@colombia-kit/nit",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Calcula el dígito de verificación y valida, formatea y limpia NIT colombianos.",
   "keywords": [
     "colombia",
