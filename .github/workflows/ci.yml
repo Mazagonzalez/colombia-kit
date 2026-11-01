@@ -62,3 +62,27 @@ jobs:
         with:
           node-version: ${{ matrix.node }}
       - run: node scripts/smoke-test.mjs
+
+  php:
+    name: PHP ${{ matrix.php }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        php: ['8.2', '8.3', '8.4', '8.5']
+    defaults:
+      run:
+        working-directory: php
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: shivammathur/setup-php@eb7c497e18156a6bbabfef1d3a82760b9eda3962 # 2.40.0
+        with:
+          php-version: ${{ matrix.php }}
+          coverage: none
+      - run: composer install --no-interaction --no-progress
+      - run: composer formato:verificar
+      - run: composer analizar
+      - run: composer test
+      - run: composer sin-extensiones
