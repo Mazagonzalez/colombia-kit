@@ -5,9 +5,16 @@ import { dirname, join } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import type { DatosDivipola } from './divipola/transformar';
 
+interface DatosVias {
+  tiposVia: { nombre: string }[];
+  cuadrantes: { nombre: string }[];
+  [clave: string]: unknown;
+}
+
 const RAIZ = fileURLToPath(new URL('..', import.meta.url));
 const ENCABEZADO = '// Generado por scripts/sincronizar-datos.ts. No editar a mano.\n';
 const DIR_DIVIPOLA = 'packages/divipola/src/generated';
+const DIR_DIRECCIONES = 'packages/direcciones/src/generated';
 
 function unionDeTextos(valores: string[]): string {
   return valores.map((valor) => `  | '${valor}'`).join('\n');
@@ -24,6 +31,8 @@ function leerJson(ruta: string): unknown {
 function archivosGenerados(): Map<string, string> {
   const { departamentos, municipios } = leerJson('data/divipola.json') as DatosDivipola;
   const { mapa } = leerJson('data/normalizacion.json') as { mapa: Record<string, string> };
+  const vias = leerJson('data/vias.json') as DatosVias;
+  const normalizacion = `${ENCABEZADO}export const TABLA_NORMALIZACION: Readonly<Record<string, string>> = ${JSON.stringify(mapa, null, 2)};\n`;
 
   return new Map([
     [
@@ -38,9 +47,11 @@ function archivosGenerados(): Map<string, string> {
       `${DIR_DIVIPOLA}/municipios.ts`,
       `${ENCABEZADO}import type { Municipio } from '../tipos';\n\nexport const MUNICIPIOS: readonly Municipio[] = [\n${listaDeRegistros(municipios)}\n] as const;\n`,
     ],
+    [`${DIR_DIVIPOLA}/normalizacion.ts`, normalizacion],
+    [`${DIR_DIRECCIONES}/normalizacion.ts`, normalizacion],
     [
-      `${DIR_DIVIPOLA}/normalizacion.ts`,
-      `${ENCABEZADO}export const TABLA_NORMALIZACION: Readonly<Record<string, string>> = ${JSON.stringify(mapa, null, 2)};\n`,
+      `${DIR_DIRECCIONES}/vias.ts`,
+      `${ENCABEZADO}export type TipoVia =\n${unionDeTextos(vias.tiposVia.map((t) => t.nombre))};\n\nexport type Cuadrante =\n${unionDeTextos(vias.cuadrantes.map((c) => c.nombre))};\n\nexport const VIAS = ${JSON.stringify(vias, null, 2)};\n`,
     ],
   ]);
 }

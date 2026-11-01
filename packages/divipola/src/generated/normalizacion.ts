@@ -26,6 +26,7 @@ export const TABLA_NORMALIZACION: Readonly<Record<string, string>> = {
   "X": "x",
   "Y": "y",
   "Z": "z",
+  "ª": "a",
   "á": "a",
   "Á": "a",
   "à": "a",

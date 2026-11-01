@@ -1,0 +1,1461 @@
+{
+  "fuentes": {
+    "mintic": {
+      "nombre": "Directorio Georreferenciado de Entidades Públicas de Colombia (MinTIC)",
+      "url": "https://www.datos.gov.co/d/kqut-4h4r"
+    },
+    "unp": {
+      "nombre": "Sedes UNP (Unidad Nacional de Protección)",
+      "url": "https://www.datos.gov.co/d/rjax-8qyz"
+    },
+    "agrario": {
+      "nombre": "Oficinas Banco Agrario",
+      "url": "https://www.datos.gov.co/d/dwft-2yw9"
+    },
+    "envigado": {
+      "nombre": "Sedes Administrativas Municipio de Envigado",
+      "url": "https://www.datos.gov.co/d/7nv5-fy9z"
+    },
+    "ibague": {
+      "nombre": "Sedes Administrativas Alcaldía de Ibagué",
+      "url": "https://www.datos.gov.co/d/eiv3-y872"
+    },
+    "antioquia": {
+      "nombre": "Gabinete Gobernación de Antioquia",
+      "url": "https://www.datos.gov.co/d/m6r5-5g2i"
+    },
+    "hospitales": {
+      "nombre": "Directorio E.S.E. Hospitales de Antioquia",
+      "url": "https://www.datos.gov.co/d/pi36-fdpk"
+    },
+    "boyaca": {
+      "nombre": "Red pública de Prestadores de Servicios de Salud de Boyacá",
+      "url": "https://www.datos.gov.co/d/8byh-6agx"
+    }
+  },
+  "reales": [
+    {
+      "ciudad": "Medellín",
+      "fuente": "mintic",
+      "entrada": "KR 64 C # 103 EE - 98",
+      "salida": {
+        "tipoVia": "Carrera",
+        "numeroVia": "64",
+        "letraVia": "C",
+        "numeroCruce": "103",
+        "letraCruce": "EE",
+        "placa": "98"
+      }
+    },
+    {
+      "ciudad": "Medellín",
+      "fuente": "mintic",
+      "entrada": "DG 29 D # 9 A SUR - 25",
+      "salida": {
+        "tipoVia": "Diagonal",
+        "numeroVia": "29",
+        "letraVia": "D",
+        "numeroCruce": "9",
+        "letraCruce": "A",
+        "cuadranteCruce": "Sur",
+        "placa": "25"
+      }
+    },
+    {
+      "ciudad": "Medellín",
+      "fuente": "mintic",
+      "entrada": "CL 44 # 52 - 165",
+      "salida": { "tipoVia": "Calle", "numeroVia": "44", "numeroCruce": "52", "placa": "165" }
+    },
+    {
+      "ciudad": "Medellín",
+      "fuente": "mintic",
+      "entrada": "CQ 2 # 72 - 35",
+      "salida": { "tipoVia": "Circular", "numeroVia": "2", "numeroCruce": "72", "placa": "35" }
+    },
+    {
+      "ciudad": "Barranquilla",
+      "fuente": "mintic",
+      "entrada": "KR 1 E # 48 - 16",
+      "salida": {
+        "tipoVia": "Carrera",
+        "numeroVia": "1",
+        "letraVia": "E",
+        "numeroCruce": "48",
+        "placa": "16"
+      }
+    },
+    {
+      "ciudad": "Barranquilla",
+      "fuente": "mintic",
+      "entrada": "DG 36 # 50 A - 32",
+      "salida": {
+        "tipoVia": "Diagonal",
+        "numeroVia": "36",
+        "numeroCruce": "50",
+        "letraCruce": "A",
+        "placa": "32"
+      }
+    },
+    {
+      "ciudad": "Bogotá",
+      "fuente": "mintic",
+      "entrada": "CL 24 A # 57 - 00",
+      "salida": {
+        "tipoVia": "Calle",
+        "numeroVia": "24",
+        "letraVia": "A",
+        "numeroCruce": "57",
+        "placa": "00"
+      }
+    },
+    {
+      "ciudad": "Bogotá",
+      "fuente": "mintic",
+      "entrada": "DG 40 BIS SUR # 80 F - 30",
+      "salida": {
+        "tipoVia": "Diagonal",
+        "numeroVia": "40",
+        "bisVia": true,
+        "cuadranteVia": "Sur",
+        "numeroCruce": "80",
+        "letraCruce": "F",
+        "placa": "30"
+      }
+    },
+    {
+      "ciudad": "Bogotá",
+      "fuente": "mintic",
+      "entrada": "TV 39 BIS A # 19 - 54",
+      "salida": {
+        "tipoVia": "Transversal",
+        "numeroVia": "39",
+        "bisVia": true,
+        "letraBisVia": "A",
+        "numeroCruce": "19",
+        "placa": "54"
+      }
+    },
+    {
+      "ciudad": "Bogotá",
+      "fuente": "mintic",
+      "entrada": "CL 146 C BIS # 90 - 11",
+      "salida": {
+        "tipoVia": "Calle",
+        "numeroVia": "146",
+        "letraVia": "C",
+        "bisVia": true,
+        "numeroCruce": "90",
+        "placa": "11"
+      }
+    },
+    {
+      "ciudad": "Bogotá",
+      "fuente": "mintic",
+      "entrada": "AV SANTA BÁRBARA # 109 A - 69",
+      "salida": {
+        "tipoVia": "Avenida",
+        "numeroVia": "SANTA BÁRBARA",
+        "numeroCruce": "109",
+        "letraCruce": "A",
+        "placa": "69"
+      }
+    },
+    {
+      "ciudad": "Tunja",
+      "fuente": "mintic",
+      "entrada": "TV 5 # 5 B SUR - 70",
+      "salida": {
+        "tipoVia": "Transversal",
+        "numeroVia": "5",
+        "numeroCruce": "5",
+        "letraCruce": "B",
+        "cuadranteCruce": "Sur",
+        "placa": "70"
+      }
+    },
+    {
+      "ciudad": "Tunja",
+      "fuente": "mintic",
+      "entrada": "KR 2 ESTE # 71 - 34",
+      "salida": {
+        "tipoVia": "Carrera",
+        "numeroVia": "2",
+        "cuadranteVia": "Este",
+        "numeroCruce": "71",
+        "placa": "34"
+      }
+    },
+    {
+      "ciudad": "Manizales",
+      "fuente": "mintic",
+      "entrada": "KR 22 # 18 - 26",
+      "salida": { "tipoVia": "Carrera", "numeroVia": "22", "numeroCruce": "18", "placa": "26" }
+    },
+    {
+      "ciudad": "Florencia",
+      "fuente": "mintic",
+      "entrada": "KR 4B # 15C - 05",
+      "salida": {
+        "tipoVia": "Carrera",
+        "numeroVia": "4",
+        "letraVia": "B",
+        "numeroCruce": "15",
+        "letraCruce": "C",
+        "placa": "05"
+      }
+    },
+    {
+      "ciudad": "Popayán",
+      "fuente": "mintic",
+      "entrada": "CL 2 NORTE # 6 - 46",
+      "salida": {
+        "tipoVia": "Calle",
+        "numeroVia": "2",
+        "cuadranteVia": "Norte",
+        "numeroCruce": "6",
+        "placa": "46"
+      }
+    },
+    {
+      "ciudad": "Popayán",
+      "fuente": "mintic",
+      "entrada": "CL 4 # 1 ESTE - 40",
+      "salida": {
+        "tipoVia": "Calle",
+        "numeroVia": "4",
+        "numeroCruce": "1",
+        "cuadranteCruce": "Este",
+        "placa": "40"
+      }
+    },
+    {
+      "ciudad": "Valledupar",
+      "fuente": "mintic",
+      "entrada": "KR 31 # 17 BIS - 10",
+      "salida": {
+        "tipoVia": "Carrera",
+        "numeroVia": "31",
+        "numeroCruce": "17",
+        "bisCruce": true,
+        "placa": "10"
+      }
+    },
+    {
+      "ciudad": "Montería",
+      "fuente": "mintic",
+      "entrada": "CL 27 # 2 - 62",
+      "salida": { "tipoVia": "Calle", "numeroVia": "27", "numeroCruce": "2", "placa": "62" }
+    },
+    {
+      "ciudad": "Quibdó",
+      "fuente": "mintic",
+      "entrada": "CL 33 A # 14 - 145",
+      "salida": {
+        "tipoVia": "Calle",
+        "numeroVia": "33",
+        "letraVia": "A",
+        "numeroCruce": "14",
+        "placa": "145"
+      }
+    },
+    {
+      "ciudad": "Neiva",
+      "fuente": "mintic",
+      "entrada": "AC 16 # 1 H - 28",
+      "salida": {
+        "tipoVia": "Avenida Calle",
+        "numeroVia": "16",
+        "numeroCruce": "1",
+        "letraCruce": "H",
+        "placa": "28"
+      }
+    },
+    {
+      "ciudad": "Neiva",
+      "fuente": "mintic",
+      "entrada": "CL 26 # 12 OESTE - 50",
+      "salida": {
+        "tipoVia": "Calle",
+        "numeroVia": "26",
+        "numeroCruce": "12",
+        "cuadranteCruce": "Oeste",
+        "placa": "50"
+      }
+    },
+    {
+      "ciudad": "Riohacha",
+      "fuente": "mintic",
+      "entrada": "CL 2 # 8 - 38",
+      "salida": { "tipoVia": "Calle", "numeroVia": "2", "numeroCruce": "8", "placa": "38" }
+    },
+    {
+      "ciudad": "Santa Marta",
+      "fuente": "mintic",
+      "entrada": "CL 26 C # 12 - 110",
+      "salida": {
+        "tipoVia": "Calle",
+        "numeroVia": "26",
+        "letraVia": "C",
+        "numeroCruce": "12",
+        "placa": "110"
+      }
+    },
+    {
+      "ciudad": "Santa Marta",
+      "fuente": "mintic",
+      "entrada": "KR 29 A # 29 L2 - 29",
+      "salida": null
+    },
+    {
+      "ciudad": "Villavicencio",
+      "fuente": "mintic",
+      "entrada": "KR 33 A # 38 - 26",
+      "salida": {
+        "tipoVia": "Carrera",
+        "numeroVia": "33",
+        "letraVia": "A",
+        "numeroCruce": "38",
+        "placa": "26"
+      }
+    },
+    {
+      "ciudad": "Pasto",
+      "fuente": "mintic",
+      "entrada": "CL 119 B # 12 - 125",
+      "salida": {
+        "tipoVia": "Calle",
+        "numeroVia": "119",
+        "letraVia": "B",
+        "numeroCruce": "12",
+        "placa": "125"
+      }
+    },
+    { "ciudad": "Pasto", "fuente": "mintic", "entrada": "KR 4 CON CL 5", "salida": null },
+    {
+      "ciudad": "Cúcuta",
+      "fuente": "mintic",
+      "entrada": "AV 7 A # 0 B NORTE - 34",
+      "salida": {
+        "tipoVia": "Avenida",
+        "numeroVia": "7",
+        "letraVia": "A",
+        "numeroCruce": "0",
+        "letraCruce": "B",
+        "cuadranteCruce": "Norte",
+        "placa": "34"
+      }
+    },
+    {
+      "ciudad": "Armenia",
+      "fuente": "mintic",
+      "entrada": "KR 19 # 18 NORTE - 45",
+      "salida": {
+        "tipoVia": "Carrera",
+        "numeroVia": "19",
+        "numeroCruce": "18",
+        "cuadranteCruce": "Norte",
+        "placa": "45"
+      }
+    },
+    {
+      "ciudad": "Pereira",
+      "fuente": "mintic",
+      "entrada": "KR 7 # 18 - 52",
+      "salida": { "tipoVia": "Carrera", "numeroVia": "7", "numeroCruce": "18", "placa": "52" }
+    },
+    {
+      "ciudad": "Bucaramanga",
+      "fuente": "mintic",
+      "entrada": "CL 104 I # 5 - 03",
+      "salida": {
+        "tipoVia": "Calle",
+        "numeroVia": "104",
+        "letraVia": "I",
+        "numeroCruce": "5",
+        "placa": "03"
+      }
+    },
+    {
+      "ciudad": "Sincelejo",
+      "fuente": "mintic",
+      "entrada": "CL 28 # 25 A - 246",
+      "salida": {
+        "tipoVia": "Calle",
+        "numeroVia": "28",
+        "numeroCruce": "25",
+        "letraCruce": "A",
+        "placa": "246"
+      }
+    },
+    {
+      "ciudad": "Ibagué",
+      "fuente": "mintic",
+      "entrada": "CL 10 A # 2 - 51",
+      "salida": {
+        "tipoVia": "Calle",
+        "numeroVia": "10",
+        "letraVia": "A",
+        "numeroCruce": "2",
+        "placa": "51"
+      }
+    },
+    {
+      "ciudad": "Cali",
+      "fuente": "mintic",
+      "entrada": "CL 23 B NORTE # 5 - 23",
+      "salida": {
+        "tipoVia": "Calle",
+        "numeroVia": "23",
+        "letraVia": "B",
+        "cuadranteVia": "Norte",
+        "numeroCruce": "5",
+        "placa": "23"
+      }
+    },
+    {
+      "ciudad": "Cali",
+      "fuente": "mintic",
+      "entrada": "AV 2 A # 47 NORTE - 02",
+      "salida": {
+        "tipoVia": "Avenida",
+        "numeroVia": "2",
+        "letraVia": "A",
+        "numeroCruce": "47",
+        "cuadranteCruce": "Norte",
+        "placa": "02"
+      }
+    },
+    {
+      "ciudad": "Cali",
+      "fuente": "mintic",
+      "entrada": "CL 2 A OESTE # 75 A - 59",
+      "salida": {
+        "tipoVia": "Calle",
+        "numeroVia": "2",
+        "letraVia": "A",
+        "cuadranteVia": "Oeste",
+        "numeroCruce": "75",
+        "letraCruce": "A",
+        "placa": "59"
+      }
+    },
+    {
+      "ciudad": "Arauca",
+      "fuente": "mintic",
+      "entrada": "KR 15 # 13 A - 04",
+      "salida": {
+        "tipoVia": "Carrera",
+        "numeroVia": "15",
+        "numeroCruce": "13",
+        "letraCruce": "A",
+        "placa": "04"
+      }
+    },
+    {
+      "ciudad": "Yopal",
+      "fuente": "mintic",
+      "entrada": "DG 15 # 13 B - 68",
+      "salida": {
+        "tipoVia": "Diagonal",
+        "numeroVia": "15",
+        "numeroCruce": "13",
+        "letraCruce": "B",
+        "placa": "68"
+      }
+    },
+    {
+      "ciudad": "Leticia",
+      "fuente": "mintic",
+      "entrada": "DG 4 # 15 - 41",
+      "salida": { "tipoVia": "Diagonal", "numeroVia": "4", "numeroCruce": "15", "placa": "41" }
+    },
+    { "ciudad": "Mocoa", "fuente": "mintic", "entrada": "KR 7 CON CL 7", "salida": null },
+    {
+      "ciudad": "Medellín",
+      "fuente": "mintic",
+      "entrada": "KM 6 NECHI - COLORADO",
+      "salida": null
+    },
+    {
+      "ciudad": "Valledupar",
+      "fuente": "mintic",
+      "entrada": "BR GARUPAL MZ 36 CS 10",
+      "salida": null
+    },
+    {
+      "ciudad": "Popayán",
+      "fuente": "mintic",
+      "entrada": "CR PORTAL DEL CERRO MZ A CS 3",
+      "salida": null
+    },
+
+    {
+      "ciudad": "Barranquilla",
+      "fuente": "unp",
+      "entrada": "Cra. 58 # 68 – 118, Barrio El Prado (Migracion Colombia) Barranquilla -Atlantico  \nMIGRACIÓN COLOMBIA",
+      "salida": {
+        "tipoVia": "Carrera",
+        "numeroVia": "58",
+        "numeroCruce": "68",
+        "placa": "118",
+        "complemento": "Barrio El Prado (Migracion Colombia) Barranquilla -Atlantico MIGRACIÓN COLOMBIA"
+      }
+    },
+    {
+      "ciudad": "Valledupar",
+      "fuente": "unp",
+      "entrada": "Carrera 9 No. 6C-24 Barrio Los Angeles Valledupar Cesar",
+      "salida": {
+        "tipoVia": "Carrera",
+        "numeroVia": "9",
+        "numeroCruce": "6",
+        "letraCruce": "C",
+        "placa": "24",
+        "complemento": "Barrio Los Angeles Valledupar Cesar"
+      }
+    },
+    {
+      "ciudad": "Santa Marta",
+      "fuente": "unp",
+      "entrada": "Calle 24 # 3-99  Edificio Banco de Bogotá , Santa Marta",
+      "salida": {
+        "tipoVia": "Calle",
+        "numeroVia": "24",
+        "numeroCruce": "3",
+        "placa": "99",
+        "complemento": "Edificio Banco de Bogotá , Santa Marta"
+      }
+    },
+    {
+      "ciudad": "Cartagena",
+      "fuente": "unp",
+      "entrada": "Carrera 20 A No.29D-38 Barrio pie de popa",
+      "salida": {
+        "tipoVia": "Carrera",
+        "numeroVia": "20",
+        "letraVia": "A",
+        "numeroCruce": "29",
+        "letraCruce": "D",
+        "placa": "38",
+        "complemento": "Barrio pie de popa"
+      }
+    },
+    {
+      "ciudad": "Medellín",
+      "fuente": "unp",
+      "entrada": "Calle. 19 No. 80ª–40 (Barrio Belén de la Nubia) - MIGRACION COLOMBIA",
+      "salida": {
+        "tipoVia": "Calle",
+        "numeroVia": "19",
+        "numeroCruce": "80",
+        "letraCruce": "A",
+        "placa": "40",
+        "complemento": "(Barrio Belén de la Nubia) - MIGRACION COLOMBIA"
+      }
+    },
+    {
+      "ciudad": "Apartadó",
+      "fuente": "unp",
+      "entrada": "Carrera 105B # 98a-13 Primer Piso Barrio Ortiz en Apartado- Antioquia",
+      "salida": {
+        "tipoVia": "Carrera",
+        "numeroVia": "105",
+        "letraVia": "B",
+        "numeroCruce": "98",
+        "letraCruce": "A",
+        "placa": "13",
+        "complemento": "Primer Piso Barrio Ortiz en Apartado- Antioquia"
+      }
+    },
+    {
+      "ciudad": "Quibdó",
+      "fuente": "unp",
+      "entrada": "Carrera 5 No. 32-62, 4 piso, Barrio Miraflores Quibdo - Chocó",
+      "salida": {
+        "tipoVia": "Carrera",
+        "numeroVia": "5",
+        "numeroCruce": "32",
+        "placa": "62",
+        "complemento": "4 Piso, Barrio Miraflores Quibdo - Chocó"
+      }
+    },
+    {
+      "ciudad": "Villavicencio",
+      "fuente": "unp",
+      "entrada": "Calle 41 A No. 30–54, barrio La Grama. Villavicencio - Meta",
+      "salida": {
+        "tipoVia": "Calle",
+        "numeroVia": "41",
+        "letraVia": "A",
+        "numeroCruce": "30",
+        "placa": "54",
+        "complemento": "Barrio La Grama. Villavicencio - Meta"
+      }
+    },
+    {
+      "ciudad": "Yopal",
+      "fuente": "unp",
+      "entrada": "Carrera 23 N°35-41",
+      "salida": { "tipoVia": "Carrera", "numeroVia": "23", "numeroCruce": "35", "placa": "41" }
+    },
+    {
+      "ciudad": "Arauca",
+      "fuente": "unp",
+      "entrada": "Carrera 20 No.17-57 Barrio la Esperanza, Centro",
+      "salida": {
+        "tipoVia": "Carrera",
+        "numeroVia": "20",
+        "numeroCruce": "17",
+        "placa": "57",
+        "complemento": "Barrio la Esperanza, Centro"
+      }
+    },
+    {
+      "ciudad": "Florencia",
+      "fuente": "unp",
+      "entrada": "Carrera 1 N° 29-08 casa lote, barrio el Cunduy",
+      "salida": {
+        "tipoVia": "Carrera",
+        "numeroVia": "1",
+        "numeroCruce": "29",
+        "placa": "08",
+        "complemento": "Casa Lote, Barrio el Cunduy"
+      }
+    },
+    {
+      "ciudad": "Mocoa",
+      "fuente": "unp",
+      "entrada": "Carrera 7A No. 15-53, barrio El Jardín (Mocoa, Putumayo).",
+      "salida": {
+        "tipoVia": "Carrera",
+        "numeroVia": "7",
+        "letraVia": "A",
+        "numeroCruce": "15",
+        "placa": "53",
+        "complemento": "Barrio El Jardín (Mocoa, Putumayo)"
+      }
+    },
+    {
+      "ciudad": "Popayán",
+      "fuente": "unp",
+      "entrada": "Carrera. 5\u00a0No. 3-28, Barrio Centro",
+      "salida": {
+        "tipoVia": "Carrera",
+        "numeroVia": "5",
+        "numeroCruce": "3",
+        "placa": "28",
+        "complemento": "Barrio Centro"
+      }
+    },
+    {
+      "ciudad": "Pasto",
+      "fuente": "unp",
+      "entrada": "Carrera  37 No. 14-18 barrio Colpatria",
+      "salida": {
+        "tipoVia": "Carrera",
+        "numeroVia": "37",
+        "numeroCruce": "14",
+        "placa": "18",
+        "complemento": "Barrio Colpatria"
+      }
+    },
+    {
+      "ciudad": "Cúcuta",
+      "fuente": "unp",
+      "entrada": "calle 10 N° 3-48 oficina 301 piso 3 Edificio Santander",
+      "salida": {
+        "tipoVia": "Calle",
+        "numeroVia": "10",
+        "numeroCruce": "3",
+        "placa": "48",
+        "complemento": "Oficina 301 Piso 3 Edificio Santander"
+      }
+    },
+    {
+      "ciudad": "Cali",
+      "fuente": "unp",
+      "entrada": "Avenida 5BN # 21-60 Barrio Versalles Cali Valle del Cauca)",
+      "salida": {
+        "tipoVia": "Avenida",
+        "numeroVia": "5",
+        "letraVia": "B",
+        "cuadranteVia": "Norte",
+        "numeroCruce": "21",
+        "placa": "60",
+        "complemento": "Barrio Versalles Cali Valle del Cauca)"
+      }
+    },
+    {
+      "ciudad": "Armenia",
+      "fuente": "unp",
+      "entrada": "Carrera 13 No. 18 – 31 Oficina 401 Edificio Sociedad de Ingenieros del Quindío",
+      "salida": {
+        "tipoVia": "Carrera",
+        "numeroVia": "13",
+        "numeroCruce": "18",
+        "placa": "31",
+        "complemento": "Oficina 401 Edificio Sociedad de Ingenieros del Quindío"
+      }
+    },
+    {
+      "ciudad": "Boyacá",
+      "fuente": "unp",
+      "entrada": "Transversal 11 # 10 -58 - Barrio Belalcázar.    -",
+      "salida": {
+        "tipoVia": "Transversal",
+        "numeroVia": "11",
+        "numeroCruce": "10",
+        "placa": "58",
+        "complemento": "Barrio Belalcázar"
+      }
+    },
+
+    {
+      "ciudad": "Abejorral",
+      "fuente": "agrario",
+      "entrada": "Carrera 50 No.49-48/50",
+      "salida": { "tipoVia": "Carrera", "numeroVia": "50", "numeroCruce": "49", "placa": "48/50" }
+    },
+    {
+      "ciudad": "Algeciras",
+      "fuente": "agrario",
+      "entrada": "CARRERA 5 N° 6- 59 local 101",
+      "salida": {
+        "tipoVia": "Carrera",
+        "numeroVia": "5",
+        "numeroCruce": "6",
+        "placa": "59",
+        "complemento": "Local 101"
+      }
+    },
+    {
+      "ciudad": "Angostura",
+      "fuente": "agrario",
+      "entrada": "Calle 11 No.9-38 Palacio Municipal - Primer Piso.",
+      "salida": {
+        "tipoVia": "Calle",
+        "numeroVia": "11",
+        "numeroCruce": "9",
+        "placa": "38",
+        "complemento": "Palacio Municipal - Primer Piso"
+      }
+    },
+    {
+      "ciudad": "Aipe",
+      "fuente": "agrario",
+      "entrada": "Calle 5 CRA 4-12 ESQUINA",
+      "salida": null
+    },
+    {
+      "ciudad": "Amagá",
+      "fuente": "agrario",
+      "entrada": "CALLE 50 N° 51 – 15",
+      "salida": { "tipoVia": "Calle", "numeroVia": "50", "numeroCruce": "51", "placa": "15" }
+    },
+
+    {
+      "ciudad": "Envigado",
+      "fuente": "envigado",
+      "entrada": "Transversal 34E Sur 33A 35",
+      "salida": {
+        "tipoVia": "Transversal",
+        "numeroVia": "34",
+        "letraVia": "E",
+        "cuadranteVia": "Sur",
+        "numeroCruce": "33",
+        "letraCruce": "A",
+        "placa": "35"
+      }
+    },
+    {
+      "ciudad": "Envigado",
+      "fuente": "envigado",
+      "entrada": "Diagonal 31 34B Sur 36",
+      "salida": {
+        "tipoVia": "Diagonal",
+        "numeroVia": "31",
+        "numeroCruce": "34",
+        "letraCruce": "B",
+        "cuadranteCruce": "Sur",
+        "placa": "36"
+      }
+    },
+    {
+      "ciudad": "Envigado",
+      "fuente": "envigado",
+      "entrada": "Carrera 45B  32B sur 16",
+      "salida": {
+        "tipoVia": "Carrera",
+        "numeroVia": "45",
+        "letraVia": "B",
+        "numeroCruce": "32",
+        "letraCruce": "B",
+        "cuadranteCruce": "Sur",
+        "placa": "16"
+      }
+    },
+    {
+      "ciudad": "Envigado",
+      "fuente": "envigado",
+      "entrada": "Calle 40 Sur 24F 106",
+      "salida": {
+        "tipoVia": "Calle",
+        "numeroVia": "40",
+        "cuadranteVia": "Sur",
+        "numeroCruce": "24",
+        "letraCruce": "F",
+        "placa": "106"
+      }
+    },
+    {
+      "ciudad": "Envigado",
+      "fuente": "envigado",
+      "entrada": "Carrera 43 38 Sur 35 Primer Piso",
+      "salida": {
+        "tipoVia": "Carrera",
+        "numeroVia": "43",
+        "numeroCruce": "38",
+        "cuadranteCruce": "Sur",
+        "placa": "35",
+        "complemento": "Primer Piso"
+      }
+    },
+    {
+      "ciudad": "Envigado",
+      "fuente": "envigado",
+      "entrada": "Murano Plaza calle 40 Sur 41 - 4",
+      "salida": null
+    },
+
+    {
+      "ciudad": "Ibagué",
+      "fuente": "ibague",
+      "entrada": "CLL 9 N° 2-59",
+      "salida": { "tipoVia": "Calle", "numeroVia": "9", "numeroCruce": "2", "placa": "59" }
+    },
+    {
+      "ciudad": "Ibagué",
+      "fuente": "ibague",
+      "entrada": "CRA 2 N°. 17-18 B/CENTRO",
+      "salida": {
+        "tipoVia": "Carrera",
+        "numeroVia": "2",
+        "numeroCruce": "17",
+        "placa": "18",
+        "complemento": "B/CENTRO"
+      }
+    },
+    {
+      "ciudad": "Ibagué",
+      "fuente": "ibague",
+      "entrada": "CRA 3 N° 10-19/21",
+      "salida": { "tipoVia": "Carrera", "numeroVia": "3", "numeroCruce": "10", "placa": "19/21" }
+    },
+    {
+      "ciudad": "Ibagué",
+      "fuente": "ibague",
+      "entrada": "CRA 23 SUR NO. 87-08 MANZANA R LOTE 1 URBANIZACION BERLIN",
+      "salida": {
+        "tipoVia": "Carrera",
+        "numeroVia": "23",
+        "cuadranteVia": "Sur",
+        "numeroCruce": "87",
+        "placa": "08",
+        "complemento": "Manzana R Lote 1 Urbanización BERLIN"
+      }
+    },
+    {
+      "ciudad": "Ibagué",
+      "fuente": "ibague",
+      "entrada": "CLL 11 SUR No20-115 RICAURTE",
+      "salida": {
+        "tipoVia": "Calle",
+        "numeroVia": "11",
+        "cuadranteVia": "Sur",
+        "numeroCruce": "20",
+        "placa": "115",
+        "complemento": "RICAURTE"
+      }
+    },
+    {
+      "ciudad": "Ibagué",
+      "fuente": "ibague",
+      "entrada": "CRA 8 A SUR 21-03-17 BARRIO GALAN",
+      "salida": null
+    },
+    {
+      "ciudad": "Ibagué",
+      "fuente": "ibague",
+      "entrada": "CRA 3 CALLE 19 NO 3.04 ESQUINA",
+      "salida": null
+    },
+    {
+      "ciudad": "Ibagué",
+      "fuente": "ibague",
+      "entrada": "CRA 4 ENTRE CALLES 6 Y 7 / CAM LA POLA",
+      "salida": null
+    },
+    {
+      "ciudad": "Ibagué",
+      "fuente": "ibague",
+      "entrada": "EDIFICIO BLU CENTER CENTRO COMERCIAL CARRERA 2 N° 12 - 44",
+      "salida": null
+    },
+
+    {
+      "ciudad": "Medellín",
+      "fuente": "antioquia",
+      "entrada": "Cl 7sur  42–70 Of. 2202  Ed. Forum",
+      "salida": {
+        "tipoVia": "Calle",
+        "numeroVia": "7",
+        "cuadranteVia": "Sur",
+        "numeroCruce": "42",
+        "placa": "70",
+        "complemento": "Oficina 2202 Edificio Forum"
+      }
+    },
+    {
+      "ciudad": "Medellín",
+      "fuente": "antioquia",
+      "entrada": "Cr 43A  34–95  CC Almacentro Torre Sur P–10",
+      "salida": {
+        "tipoVia": "Carrera",
+        "numeroVia": "43",
+        "letraVia": "A",
+        "numeroCruce": "34",
+        "placa": "95",
+        "complemento": "CC Almacentro Torre Sur P–10"
+      }
+    },
+    {
+      "ciudad": "Medellín",
+      "fuente": "antioquia",
+      "entrada": "Cll 44  53A–11 Torre A  Ed. Plaza de la Libertad",
+      "salida": {
+        "tipoVia": "Calle",
+        "numeroVia": "44",
+        "numeroCruce": "53",
+        "letraCruce": "A",
+        "placa": "11",
+        "complemento": "Torre A Edificio Plaza de la Libertad"
+      }
+    },
+    {
+      "ciudad": "Medellín",
+      "fuente": "antioquia",
+      "entrada": "Cra 50  12sur–149 Autop. Sur",
+      "salida": {
+        "tipoVia": "Carrera",
+        "numeroVia": "50",
+        "numeroCruce": "12",
+        "cuadranteCruce": "Sur",
+        "placa": "149",
+        "complemento": "Autop. Sur"
+      }
+    },
+    {
+      "ciudad": "Medellín",
+      "fuente": "antioquia",
+      "entrada": "Cra\u2029 43A\u2029 No. \u202919\u2029\u00ad\u2029127 \u2029Ed. \u2029Recife, \u2029Piso\u2029 5",
+      "salida": {
+        "tipoVia": "Carrera",
+        "numeroVia": "43",
+        "letraVia": "A",
+        "numeroCruce": "19",
+        "placa": "127",
+        "complemento": "Edificio Recife, Piso 5"
+      }
+    },
+    {
+      "ciudad": "Medellín",
+      "fuente": "antioquia",
+      "entrada": "Cll 10sur  50E–31",
+      "salida": {
+        "tipoVia": "Calle",
+        "numeroVia": "10",
+        "cuadranteVia": "Sur",
+        "numeroCruce": "50",
+        "letraCruce": "E",
+        "placa": "31"
+      }
+    },
+    {
+      "ciudad": "Medellín",
+      "fuente": "antioquia",
+      "entrada": "Cl 31 con Cra 18, El Palmar",
+      "salida": null
+    },
+
+    {
+      "ciudad": "Amagá",
+      "fuente": "hospitales",
+      "entrada": "Cra 51 No 52 81",
+      "salida": { "tipoVia": "Carrera", "numeroVia": "51", "numeroCruce": "52", "placa": "81" }
+    },
+    {
+      "ciudad": "Andes",
+      "fuente": "hospitales",
+      "entrada": "AV MEDELLIN # 48-20",
+      "salida": {
+        "tipoVia": "Avenida",
+        "numeroVia": "MEDELLIN",
+        "numeroCruce": "48",
+        "placa": "20"
+      }
+    },
+    {
+      "ciudad": "Apartadó",
+      "fuente": "hospitales",
+      "entrada": "KR 98 # 106-176 BARRIO LA CHINITA",
+      "salida": {
+        "tipoVia": "Carrera",
+        "numeroVia": "98",
+        "numeroCruce": "106",
+        "placa": "176",
+        "complemento": "Barrio LA CHINITA"
+      }
+    },
+    {
+      "ciudad": "Copacabana",
+      "fuente": "hospitales",
+      "entrada": "KR 64 Nº 48-80 La misericordia",
+      "salida": {
+        "tipoVia": "Carrera",
+        "numeroVia": "64",
+        "numeroCruce": "48",
+        "placa": "80",
+        "complemento": "La misericordia"
+      }
+    },
+    {
+      "ciudad": "Entrerríos",
+      "fuente": "hospitales",
+      "entrada": "TRANSVERSAL 13 CALLE 2-17",
+      "salida": null
+    },
+    {
+      "ciudad": "La Estrella",
+      "fuente": "hospitales",
+      "entrada": "CL 83 A SUR N° 60 - 45",
+      "salida": {
+        "tipoVia": "Calle",
+        "numeroVia": "83",
+        "letraVia": "A",
+        "cuadranteVia": "Sur",
+        "numeroCruce": "60",
+        "placa": "45"
+      }
+    },
+    {
+      "ciudad": "Sabaneta",
+      "fuente": "hospitales",
+      "entrada": "KR 46B # 77 SUR 36",
+      "salida": {
+        "tipoVia": "Carrera",
+        "numeroVia": "46",
+        "letraVia": "B",
+        "numeroCruce": "77",
+        "cuadranteCruce": "Sur",
+        "placa": "36"
+      }
+    },
+    {
+      "ciudad": "San Vicente",
+      "fuente": "hospitales",
+      "entrada": "AV CARVAJAL # 31-36",
+      "salida": {
+        "tipoVia": "Avenida",
+        "numeroVia": "CARVAJAL",
+        "numeroCruce": "31",
+        "placa": "36"
+      }
+    },
+    {
+      "ciudad": "Valparaíso",
+      "fuente": "hospitales",
+      "entrada": "CRA 12 NRO 6-31",
+      "salida": { "tipoVia": "Carrera", "numeroVia": "12", "numeroCruce": "6", "placa": "31" }
+    },
+    {
+      "ciudad": "Vigía del Fuerte",
+      "fuente": "hospitales",
+      "entrada": "CRA 1°#20A-66 BARRIO PUERTO CARIBE",
+      "salida": {
+        "tipoVia": "Carrera",
+        "numeroVia": "1",
+        "numeroCruce": "20",
+        "letraCruce": "A",
+        "placa": "66",
+        "complemento": "Barrio PUERTO CARIBE"
+      }
+    },
+    {
+      "ciudad": "Turbo",
+      "fuente": "hospitales",
+      "entrada": "KM 1 SALIDA TURBO - APARTADO",
+      "salida": null
+    },
+
+    {
+      "ciudad": "Aquitania",
+      "fuente": "boyaca",
+      "entrada": "Cra 6 numero 5 -27 Centro",
+      "salida": {
+        "tipoVia": "Carrera",
+        "numeroVia": "6",
+        "numeroCruce": "5",
+        "placa": "27",
+        "complemento": "Centro"
+      }
+    },
+    {
+      "ciudad": "Arcabuco",
+      "fuente": "boyaca",
+      "entrada": "AV. 5 N.4 - 47",
+      "salida": { "tipoVia": "Avenida", "numeroVia": "5", "numeroCruce": "4", "placa": "47" }
+    },
+    {
+      "ciudad": "Arcabuco",
+      "fuente": "boyaca",
+      "entrada": "AVDA 5 No 4-47",
+      "salida": { "tipoVia": "Avenida", "numeroVia": "5", "numeroCruce": "4", "placa": "47" }
+    },
+    {
+      "ciudad": "Belén",
+      "fuente": "boyaca",
+      "entrada": "KRA 6 No. 5-72",
+      "salida": { "tipoVia": "Carrera", "numeroVia": "6", "numeroCruce": "5", "placa": "72" }
+    },
+    {
+      "ciudad": "Buenavista",
+      "fuente": "boyaca",
+      "entrada": "KR. 3 No. 3-53",
+      "salida": { "tipoVia": "Carrera", "numeroVia": "3", "numeroCruce": "3", "placa": "53" }
+    },
+    {
+      "ciudad": "Berbeo",
+      "fuente": "boyaca",
+      "entrada": "Cll 2 Nº 5-0",
+      "salida": { "tipoVia": "Calle", "numeroVia": "2", "numeroCruce": "5", "placa": "0" }
+    },
+    {
+      "ciudad": "Chiquinquirá",
+      "fuente": "boyaca",
+      "entrada": "CRA 9 Nº 12-20 CONSULTORIO 103",
+      "salida": {
+        "tipoVia": "Carrera",
+        "numeroVia": "9",
+        "numeroCruce": "12",
+        "placa": "20",
+        "complemento": "Consultorio 103"
+      }
+    },
+    {
+      "ciudad": "Chiquinquirá",
+      "fuente": "boyaca",
+      "entrada": "CARRERA 8 N° 18-11 LC 101",
+      "salida": {
+        "tipoVia": "Carrera",
+        "numeroVia": "8",
+        "numeroCruce": "18",
+        "placa": "11",
+        "complemento": "Local 101"
+      }
+    },
+    {
+      "ciudad": "Chiquinquirá",
+      "fuente": "boyaca",
+      "entrada": "Vía Tunja N° 35-75",
+      "salida": { "tipoVia": "Vía", "numeroVia": "Tunja", "numeroCruce": "35", "placa": "75" }
+    }
+  ],
+  "variantes": [
+    {
+      "descripcion": "Avenida Calle escrita completa",
+      "entrada": "Avenida Calle 26 # 69-76",
+      "salida": {
+        "tipoVia": "Avenida Calle",
+        "numeroVia": "26",
+        "numeroCruce": "69",
+        "placa": "76"
+      }
+    },
+    {
+      "descripcion": "Avenida Calle con abreviaturas y puntos",
+      "entrada": "Av. Cll. 26 No. 69-76",
+      "salida": {
+        "tipoVia": "Avenida Calle",
+        "numeroVia": "26",
+        "numeroCruce": "69",
+        "placa": "76"
+      }
+    },
+    {
+      "descripcion": "Avenida Carrera con abreviaturas",
+      "entrada": "Av. Cra. 30 # 45-03",
+      "salida": {
+        "tipoVia": "Avenida Carrera",
+        "numeroVia": "30",
+        "numeroCruce": "45",
+        "placa": "03"
+      }
+    },
+    {
+      "descripcion": "tipo pegado al número",
+      "entrada": "Cra7#32-16",
+      "salida": { "tipoVia": "Carrera", "numeroVia": "7", "numeroCruce": "32", "placa": "16" }
+    },
+    {
+      "descripcion": "vía con nombre de varias palabras",
+      "entrada": "Avenida El Dorado # 68-90",
+      "salida": {
+        "tipoVia": "Avenida",
+        "numeroVia": "El Dorado",
+        "numeroCruce": "68",
+        "placa": "90"
+      }
+    },
+    {
+      "descripcion": "vía con nombre y abreviatura con punto",
+      "entrada": "Autopista Norte No. 100-20 Local 5",
+      "salida": {
+        "tipoVia": "Autopista",
+        "numeroVia": "Norte",
+        "numeroCruce": "100",
+        "placa": "20",
+        "complemento": "Local 5"
+      }
+    },
+    {
+      "descripcion": "vía con nombre de fecha",
+      "entrada": "Avenida 30 de Agosto # 33-12",
+      "salida": {
+        "tipoVia": "Avenida",
+        "numeroVia": "30 de Agosto",
+        "numeroCruce": "33",
+        "placa": "12"
+      }
+    },
+    {
+      "descripcion": "vía con abreviatura final en el nombre",
+      "entrada": "Av. Sta. # 10-20",
+      "salida": { "tipoVia": "Avenida", "numeroVia": "Sta", "numeroCruce": "10", "placa": "20" }
+    },
+    {
+      "descripcion": "dos cuadrantes",
+      "entrada": "Calle 10 Sur # 5-20 Este",
+      "salida": {
+        "tipoVia": "Calle",
+        "numeroVia": "10",
+        "cuadranteVia": "Sur",
+        "numeroCruce": "5",
+        "cuadranteCruce": "Este",
+        "placa": "20"
+      }
+    },
+    {
+      "descripcion": "Bis en vía y cruce con letras",
+      "entrada": "Cra 15 A Bis B # 45 C Bis D - 20",
+      "salida": {
+        "tipoVia": "Carrera",
+        "numeroVia": "15",
+        "letraVia": "A",
+        "bisVia": true,
+        "letraBisVia": "B",
+        "numeroCruce": "45",
+        "letraCruce": "C",
+        "bisCruce": true,
+        "letraBisCruce": "D",
+        "placa": "20"
+      }
+    },
+    {
+      "descripcion": "Norte abreviado antes de un marcador",
+      "entrada": "Avenida 2N #10-70",
+      "salida": {
+        "tipoVia": "Avenida",
+        "numeroVia": "2",
+        "cuadranteVia": "Norte",
+        "numeroCruce": "10",
+        "placa": "70"
+      }
+    },
+    {
+      "descripcion": "N como marcador de número",
+      "entrada": "CRA 9 N 5-56",
+      "salida": { "tipoVia": "Carrera", "numeroVia": "9", "numeroCruce": "5", "placa": "56" }
+    },
+    {
+      "descripcion": "Norte abreviado en el cruce",
+      "entrada": "Av 6 # 28N-102",
+      "salida": {
+        "tipoVia": "Avenida",
+        "numeroVia": "6",
+        "numeroCruce": "28",
+        "cuadranteCruce": "Norte",
+        "placa": "102"
+      }
+    },
+    {
+      "descripcion": "la E se lee como letra",
+      "entrada": "Cra 1 E # 5 E - 20",
+      "salida": {
+        "tipoVia": "Carrera",
+        "numeroVia": "1",
+        "letraVia": "E",
+        "numeroCruce": "5",
+        "letraCruce": "E",
+        "placa": "20"
+      }
+    },
+    {
+      "descripcion": "cuadrante después de la placa",
+      "entrada": "Calle 5 # 10-20 Este Apto 2",
+      "salida": {
+        "tipoVia": "Calle",
+        "numeroVia": "5",
+        "numeroCruce": "10",
+        "cuadranteCruce": "Este",
+        "placa": "20",
+        "complemento": "Apartamento 2"
+      }
+    },
+    {
+      "descripcion": "segundo cuadrante después de la placa queda en el complemento",
+      "entrada": "Calle 5 # 10 Sur - 20 Este",
+      "salida": {
+        "tipoVia": "Calle",
+        "numeroVia": "5",
+        "numeroCruce": "10",
+        "cuadranteCruce": "Sur",
+        "placa": "20",
+        "complemento": "Este"
+      }
+    },
+    {
+      "descripcion": "letra pegada a la placa",
+      "entrada": "Cra 7 # 32-16A Int 3",
+      "salida": {
+        "tipoVia": "Carrera",
+        "numeroVia": "7",
+        "numeroCruce": "32",
+        "placa": "16A",
+        "complemento": "Interior 3"
+      }
+    },
+    {
+      "descripcion": "letra separada de la placa queda en el complemento",
+      "entrada": "Cra 7 # 32-16 A",
+      "salida": {
+        "tipoVia": "Carrera",
+        "numeroVia": "7",
+        "numeroCruce": "32",
+        "placa": "16",
+        "complemento": "A"
+      }
+    },
+    {
+      "descripcion": "palabra de complemento pegada al número",
+      "entrada": "Cra 7 # 32-16 Apto301 Torre2",
+      "salida": {
+        "tipoVia": "Carrera",
+        "numeroVia": "7",
+        "numeroCruce": "32",
+        "placa": "16",
+        "complemento": "Apartamento 301 Torre 2"
+      }
+    },
+    {
+      "descripcion": "complemento con punto y letra pegada",
+      "entrada": "Cra 7 # 32-16 Ed.Forum",
+      "salida": {
+        "tipoVia": "Carrera",
+        "numeroVia": "7",
+        "numeroCruce": "32",
+        "placa": "16",
+        "complemento": "Edificio Forum"
+      }
+    },
+    {
+      "descripcion": "tildes en la variante",
+      "entrada": "CARRÉRA 7 NÚMERO 32-16",
+      "salida": { "tipoVia": "Carrera", "numeroVia": "7", "numeroCruce": "32", "placa": "16" }
+    },
+    { "descripcion": "número de vía demasiado largo", "entrada": "Cra 1234 # 5-6", "salida": null },
+    {
+      "descripcion": "número de cruce demasiado largo",
+      "entrada": "Cra 12 # 1234-6",
+      "salida": null
+    },
+    { "descripcion": "placa demasiado larga", "entrada": "Cra 12 # 12-12345", "salida": null },
+    { "descripcion": "sin placa", "entrada": "Cra 7 # 32", "salida": null },
+    { "descripcion": "sin cruce", "entrada": "Cra 7", "salida": null },
+    { "descripcion": "solo el tipo", "entrada": "Carrera", "salida": null },
+    {
+      "descripcion": "vía con nombre sin marcador",
+      "entrada": "Avenida El Dorado 68-90",
+      "salida": null
+    },
+    { "descripcion": "vía con nombre sin cruce", "entrada": "Avenida El Dorado #", "salida": null },
+    {
+      "descripcion": "marcador justo después del tipo",
+      "entrada": "Carrera # 7-16",
+      "salida": null
+    },
+    { "descripcion": "tipo desconocido", "entrada": "Pasaje 7 # 32-16", "salida": null },
+    { "descripcion": "texto vacío", "entrada": "", "salida": null },
+    { "descripcion": "solo espacios", "entrada": "   ", "salida": null },
+    { "descripcion": "null", "entrada": null, "salida": null },
+    { "descripcion": "número", "entrada": 123, "salida": null }
+  ],
+  "formatear": [
+    { "entrada": "KR 7 # 32 - 16", "corto": "Cra 7 # 32-16", "largo": "Carrera 7 # 32 - 16" },
+    {
+      "entrada": "kra 7a no. 32b-16 apto 301",
+      "corto": "Cra 7A # 32B-16 Apto 301",
+      "largo": "Carrera 7 A # 32 B - 16 Apartamento 301"
+    },
+    {
+      "entrada": "Calle 10 Sur # 5-20 Este",
+      "corto": "Cl 10 Sur # 5 Este-20",
+      "largo": "Calle 10 Sur # 5 Este - 20"
+    },
+    {
+      "entrada": "Avenida Calle 26 # 69-76 Oficina 5",
+      "corto": "Av Cl 26 # 69-76 Of 5",
+      "largo": "Avenida Calle 26 # 69 - 76 Oficina 5"
+    },
+    {
+      "entrada": "AK 30 # 45-03",
+      "corto": "Av Cra 30 # 45-03",
+      "largo": "Avenida Carrera 30 # 45 - 03"
+    },
+    {
+      "entrada": "TV 39 BIS A # 19 - 54",
+      "corto": "Tv 39 Bis A # 19-54",
+      "largo": "Transversal 39 Bis A # 19 - 54"
+    },
+    {
+      "entrada": "Cra 15 A Bis B # 45 C Bis D - 20",
+      "corto": "Cra 15A Bis B # 45C Bis D-20",
+      "largo": "Carrera 15 A Bis B # 45 C Bis D - 20"
+    },
+    {
+      "entrada": "Avenida El Dorado # 68-90",
+      "corto": "Av El Dorado # 68-90",
+      "largo": "Avenida El Dorado # 68 - 90"
+    },
+    {
+      "entrada": "Carrera 50 No.49-48/50",
+      "corto": "Cra 50 # 49-48/50",
+      "largo": "Carrera 50 # 49 - 48/50"
+    },
+    {
+      "entrada": "Cra 7 # 32-16 Bloque 2 Torre 1 Mz 3",
+      "corto": "Cra 7 # 32-16 Bloque 2 Torre 1 Mz 3",
+      "largo": "Carrera 7 # 32 - 16 Bloque 2 Torre 1 Manzana 3"
+    }
+  ]
+}
