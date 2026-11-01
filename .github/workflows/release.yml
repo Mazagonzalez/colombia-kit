@@ -38,9 +38,11 @@ jobs:
         with:
           version-script: pnpm version-packages
           publish-script: pnpm release
-          commit-message: 'chore: versionar paquetes'
+          commit-message: |
+            chore: versionar paquetes
+
+            Co-Authored-By: Claude <noreply@anthropic.com>
           pr-title: 'chore: versionar paquetes'
           github-token: ${{ secrets.BOT_TOKEN || github.token }}
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-          NPM_CONFIG_PROVENANCE: true

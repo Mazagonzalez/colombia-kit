@@ -5,7 +5,7 @@
 
 Utilidades open source para desarrolladores que trabajan con datos colombianos: NIT, DIVIPOLA y direcciones. Disponible para JavaScript/TypeScript y para PHP con integración para Laravel, con la misma lógica y los mismos resultados en ambos lenguajes.
 
-> **Estado:** en desarrollo. Todavía no hay versiones publicadas, así que los ejemplos muestran la API prevista.
+> **Estado:** los paquetes de JavaScript/TypeScript ya están publicados en npm. La versión de PHP está en desarrollo, así que su ejemplo muestra la API prevista.
 
 ## Por qué existe
 
