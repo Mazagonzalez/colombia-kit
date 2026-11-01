@@ -1,0 +1,234 @@
+{
+  "entidades": [
+    {
+      "entidad": "DIAN",
+      "numero": "800197268",
+      "dv": 4,
+      "formateado": "800.197.268-4",
+      "fuente": "https://www.dian.gov.co/tramitesservicios/Tramites_Impuestos/RUT/Paginas/default.aspx"
+    },
+    {
+      "entidad": "Ecopetrol S.A.",
+      "numero": "899999068",
+      "dv": 1,
+      "formateado": "899.999.068-1",
+      "fuente": "https://directorio-empresas.einforma.co/informacion-empresa/ecopetrol-sa"
+    },
+    {
+      "entidad": "Banco de la República",
+      "numero": "860005216",
+      "dv": 7,
+      "formateado": "860.005.216-7",
+      "fuente": "https://cbonds.com/company/58939/"
+    },
+    {
+      "entidad": "Instituto Colombiano de Bienestar Familiar",
+      "numero": "899999239",
+      "dv": 2,
+      "formateado": "899.999.239-2",
+      "fuente": "https://www.icbf.gov.co/node/31731"
+    },
+    {
+      "entidad": "Universidad Nacional de Colombia",
+      "numero": "899999063",
+      "dv": 3,
+      "formateado": "899.999.063-3",
+      "fuente": "https://gerencia.unal.edu.co/fileadmin/Gestion-Financiera/Certificacion_de_Responsabilidades_Tributarias_de_la_Universidad_Nacional_de_Colombia/Certificacion_responsabilidades_tributarias__UNAL.pdf"
+    },
+    {
+      "entidad": "Municipio de Medellín",
+      "numero": "890905211",
+      "dv": 1,
+      "formateado": "890.905.211-1",
+      "fuente": "https://www.colombiacompra.gov.co/sites/cce_public/files/documentos_adicionales_oc/certificado_4600091535_de_2021.pdf"
+    },
+    {
+      "entidad": "Municipio de Santiago de Cali",
+      "numero": "890399011",
+      "dv": 3,
+      "formateado": "890.399.011-3",
+      "fuente": "https://www.cali.gov.co/aplicaciones/observatorio/"
+    }
+  ],
+  "calcularDV": [
+    { "descripcion": "resto mayor que 1: 11 menos el resto", "entrada": "800197268", "salida": 4 },
+    { "descripcion": "resto 0: el DV es 0", "entrada": "800000008", "salida": 0 },
+    { "descripcion": "resto 1: el DV es 1", "entrada": "800000001", "salida": 1 },
+    { "descripcion": "resto 2: el DV es 9", "entrada": "800000005", "salida": 9 },
+    { "descripcion": "resto 10: el DV es 1", "entrada": "899999068", "salida": 1 },
+    { "descripcion": "entrada numérica", "entrada": 800197268, "salida": 4 },
+    { "descripcion": "con puntos", "entrada": "800.197.268", "salida": 4 },
+    { "descripcion": "con espacios", "entrada": " 800 197 268 ", "salida": 4 },
+    { "descripcion": "ignora el DV correcto de la entrada", "entrada": "800197268-4", "salida": 4 },
+    {
+      "descripcion": "ignora el DV incorrecto de la entrada",
+      "entrada": "800197268-9",
+      "salida": 4
+    },
+    {
+      "descripcion": "10 dígitos sin guion son todos número",
+      "entrada": "1012345678",
+      "salida": 9
+    },
+    { "descripcion": "un solo dígito", "entrada": "8", "salida": 9 },
+    { "descripcion": "15 dígitos, el máximo", "entrada": "123456789012345", "salida": 2 },
+    {
+      "descripcion": "los ceros a la izquierda no cambian el DV",
+      "entrada": "0800197268",
+      "salida": 4
+    },
+    { "descripcion": "16 dígitos es demasiado", "entrada": "1234567890123456", "salida": null },
+    { "descripcion": "texto vacío", "entrada": "", "salida": null },
+    { "descripcion": "solo letras", "entrada": "abc", "salida": null },
+    { "descripcion": "letras entre dígitos", "entrada": "12a45", "salida": null },
+    { "descripcion": "solo ceros", "entrada": "000000000", "salida": null },
+    { "descripcion": "el número cero", "entrada": 0, "salida": null },
+    { "descripcion": "número negativo", "entrada": -800197268, "salida": null },
+    { "descripcion": "número con decimales", "entrada": 8001972.5, "salida": null },
+    { "descripcion": "null", "entrada": null, "salida": null },
+    { "descripcion": "booleano", "entrada": true, "salida": null },
+    { "descripcion": "dígitos que no son ASCII", "entrada": "٨٠٠١٩٧٢٦٨", "salida": null },
+    { "descripcion": "guion sin DV", "entrada": "800197268-", "salida": null },
+    { "descripcion": "DV de dos dígitos", "entrada": "800197268-44", "salida": null },
+    { "descripcion": "guion al inicio", "entrada": "-800197268", "salida": null },
+    { "descripcion": "separador no admitido", "entrada": "800197268/4", "salida": null }
+  ],
+  "limpiarNIT": [
+    {
+      "descripcion": "con puntos y guion",
+      "entrada": "800.197.268-4",
+      "salida": { "numero": "800197268", "dv": 4 }
+    },
+    {
+      "descripcion": "10 dígitos sin guion son número y DV",
+      "entrada": "8001972684",
+      "salida": { "numero": "800197268", "dv": 4 }
+    },
+    {
+      "descripcion": "10 dígitos como número",
+      "entrada": 8001972684,
+      "salida": { "numero": "800197268", "dv": 4 }
+    },
+    {
+      "descripcion": "9 dígitos sin guion no traen DV",
+      "entrada": "800197268",
+      "salida": { "numero": "800197268", "dv": null }
+    },
+    {
+      "descripcion": "5 dígitos sin guion no traen DV",
+      "entrada": "12345",
+      "salida": { "numero": "12345", "dv": null }
+    },
+    {
+      "descripcion": "espacios alrededor del guion",
+      "entrada": " 800 197 268 - 4 ",
+      "salida": { "numero": "800197268", "dv": 4 }
+    },
+    {
+      "descripcion": "espacio de no separación",
+      "entrada": "800\u00a0197\u00a0268-4",
+      "salida": { "numero": "800197268", "dv": 4 }
+    },
+    {
+      "descripcion": "tabulador y salto de línea",
+      "entrada": "\t800197268-4\r\n",
+      "salida": { "numero": "800197268", "dv": 4 }
+    },
+    {
+      "descripcion": "guion medio",
+      "entrada": "800197268\u20134",
+      "salida": { "numero": "800197268", "dv": 4 }
+    },
+    {
+      "descripcion": "guion largo",
+      "entrada": "800197268\u20144",
+      "salida": { "numero": "800197268", "dv": 4 }
+    },
+    {
+      "descripcion": "cédula de 10 dígitos con guion",
+      "entrada": "1012345678-9",
+      "salida": { "numero": "1012345678", "dv": 9 }
+    },
+    {
+      "descripcion": "10 dígitos sin guion se leen como 9 más DV aunque sea una cédula",
+      "entrada": "1012345678",
+      "salida": { "numero": "101234567", "dv": 8 }
+    },
+    {
+      "descripcion": "no comprueba el DV",
+      "entrada": "900.123.456-7",
+      "salida": { "numero": "900123456", "dv": 7 }
+    },
+    {
+      "descripcion": "conserva los ceros a la izquierda",
+      "entrada": "0800197268-4",
+      "salida": { "numero": "0800197268", "dv": 4 }
+    },
+    {
+      "descripcion": "15 dígitos con guion",
+      "entrada": "123456789012345-2",
+      "salida": { "numero": "123456789012345", "dv": 2 }
+    },
+    {
+      "descripcion": "11 dígitos sin guion son ambiguos",
+      "entrada": "10123456789",
+      "salida": null
+    },
+    { "descripcion": "16 dígitos con guion", "entrada": "1234567890123456-1", "salida": null },
+    { "descripcion": "número solo de ceros con DV", "entrada": "000000000-0", "salida": null },
+    { "descripcion": "texto vacío", "entrada": "", "salida": null },
+    { "descripcion": "null", "entrada": null, "salida": null }
+  ],
+  "validarNIT": [
+    { "descripcion": "formato completo", "entrada": "800.197.268-4", "salida": true },
+    { "descripcion": "sin puntos", "entrada": "800197268-4", "salida": true },
+    { "descripcion": "10 dígitos sin guion", "entrada": "8001972684", "salida": true },
+    { "descripcion": "10 dígitos como número", "entrada": 8001972684, "salida": true },
+    { "descripcion": "con espacios", "entrada": "800 197 268 4", "salida": true },
+    { "descripcion": "DV correcto de 900123456", "entrada": "900.123.456-8", "salida": true },
+    { "descripcion": "DV incorrecto de 900123456", "entrada": "900.123.456-7", "salida": false },
+    { "descripcion": "cédula de 10 dígitos con guion", "entrada": "1012345678-9", "salida": true },
+    {
+      "descripcion": "cédula de 10 dígitos sin guion se lee como 9 más DV",
+      "entrada": "1012345678",
+      "salida": false
+    },
+    { "descripcion": "ceros a la izquierda con guion", "entrada": "0800197268-4", "salida": true },
+    { "descripcion": "sin DV no hay nada que comprobar", "entrada": "800197268", "salida": false },
+    { "descripcion": "solo ceros", "entrada": "000000000-0", "salida": false },
+    { "descripcion": "texto vacío", "entrada": "", "salida": false },
+    { "descripcion": "solo letras", "entrada": "abc", "salida": false },
+    { "descripcion": "null", "entrada": null, "salida": false }
+  ],
+  "formatearNIT": [
+    { "descripcion": "10 dígitos sin guion", "entrada": "8001972684", "salida": "800.197.268-4" },
+    { "descripcion": "calcula el DV si falta", "entrada": "800197268", "salida": "800.197.268-4" },
+    { "descripcion": "entrada numérica sin DV", "entrada": 899999068, "salida": "899.999.068-1" },
+    {
+      "descripcion": "conserva un DV incorrecto",
+      "entrada": "900123456-7",
+      "salida": "900.123.456-7"
+    },
+    { "descripcion": "ya tiene el formato", "entrada": "800.197.268-4", "salida": "800.197.268-4" },
+    { "descripcion": "número corto", "entrada": "12345", "salida": "12.345-8" },
+    { "descripcion": "un solo dígito", "entrada": "8", "salida": "8-9" },
+    {
+      "descripcion": "cédula de 10 dígitos",
+      "entrada": "1012345678-9",
+      "salida": "1.012.345.678-9"
+    },
+    {
+      "descripcion": "15 dígitos",
+      "entrada": "123456789012345-2",
+      "salida": "123.456.789.012.345-2"
+    },
+    {
+      "descripcion": "ceros a la izquierda",
+      "entrada": "0800197268-4",
+      "salida": "0.800.197.268-4"
+    },
+    { "descripcion": "texto vacío", "entrada": "", "salida": null },
+    { "descripcion": "solo letras", "entrada": "abc", "salida": null },
+    { "descripcion": "null", "entrada": null, "salida": null }
+  ]
+}
