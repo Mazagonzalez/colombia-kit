@@ -1,0 +1,52 @@
+{
+  "name": "@colombia-kit/nit",
+  "version": "0.0.0",
+  "description": "Calcula el dígito de verificación y valida, formatea y limpia NIT colombianos.",
+  "keywords": [
+    "colombia",
+    "nit",
+    "dian",
+    "digito-de-verificacion",
+    "validacion"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mazagonzalez/colombia-kit.git",
+    "directory": "packages/nit"
+  },
+  "homepage": "https://github.com/Mazagonzalez/colombia-kit/tree/main/packages/nit#readme",
+  "bugs": "https://github.com/Mazagonzalez/colombia-kit/issues",
+  "type": "module",
+  "sideEffects": false,
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsup",
+    "typecheck": "tsc --noEmit",
+    "check:paquete": "publint && attw --pack . --profile node16"
+  }
+}
