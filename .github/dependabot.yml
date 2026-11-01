@@ -11,6 +11,13 @@ updates:
     groups:
       desarrollo:
         dependency-type: development
+    ignore:
+      # typescript-eslint todavía no soporta TypeScript 7.
+      - dependency-name: typescript
+        update-types: ['version-update:semver-major']
+      # Debe seguir la versión mínima de Node para desarrollar (22).
+      - dependency-name: '@types/node'
+        update-types: ['version-update:semver-major']
 
   - package-ecosystem: github-actions
     directory: /
