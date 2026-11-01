@@ -1,0 +1,35 @@
+version: 2
+
+updates:
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+    commit-message:
+      prefix: chore
+      include: scope
+    groups:
+      desarrollo:
+        dependency-type: development
+
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+    commit-message:
+      prefix: ci
+    groups:
+      acciones:
+        patterns: ['*']
+
+  # Se activa en feat/php-core, cuando exista php/composer.json.
+  # - package-ecosystem: composer
+  #   directory: /php
+  #   schedule:
+  #     interval: weekly
+  #   commit-message:
+  #     prefix: chore
+  #     include: scope
+  #   groups:
+  #     desarrollo:
+  #       dependency-type: development
