@@ -37,6 +37,7 @@ validarNIT('800.197.268-4'); // true
 
 buscarMunicipio('medellin');
 parsearDireccion('Cra 7 # 45-20 Apto 301');
+// { tipoVia: 'Carrera', numeroVia: '7', numeroCruce: '45', placa: '20', complemento: 'Apartamento 301' }
 ```
 
 ### PHP
