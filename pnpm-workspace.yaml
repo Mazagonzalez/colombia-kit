@@ -1,0 +1,6 @@
+packages:
+  - packages/*
+
+# esbuild trae su binario como dependencia opcional: no hace falta ejecutar su postinstall.
+allowBuilds:
+  esbuild: false

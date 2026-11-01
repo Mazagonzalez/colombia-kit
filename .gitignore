@@ -1,0 +1,12 @@
+node_modules/
+dist/
+coverage/
+*.log
+*.tgz
+.DS_Store
+
+# PHP
+php/vendor/
+php/composer.lock
+php/.phpunit.cache/
+php/.phpunit.result.cache

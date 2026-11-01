@@ -1,0 +1,8 @@
+pnpm-lock.yaml
+dist
+coverage
+CHANGELOG.md
+.changeset/*.md
+data/divipola.json
+**/generated/**
+php
