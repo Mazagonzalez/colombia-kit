@@ -46,6 +46,8 @@ composer verificar
 
 Si cambias `data/`, corre `pnpm datos:sincronizar`: también actualiza las copias de `php/resources/data/`.
 
+Si tu cambio afecta al paquete de PHP, elige `colombia-kit-php` en `pnpm changeset`. Ese nombre solo existe para llevar la versión: `php/package.json` no se publica en npm. Cuando el PR de versiones se integra, el workflow **Split de PHP** copia `php/` al repo de solo lectura [`colombia-kit-php`](https://github.com/Mazagonzalez/colombia-kit-php) y crea allá el tag `vX.Y.Z`, de donde Packagist toma la versión.
+
 ## Enviar un cambio
 
 1. Crea una rama desde `main`: nunca se hacen commits directos a `main`.
