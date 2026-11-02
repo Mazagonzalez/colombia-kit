@@ -63,9 +63,11 @@ describe('formatearDireccion', () => {
     expect(formatearDireccion(direccion, { estilo: 'largo' })).toBe(largo);
   });
 
-  it('devuelve null si no recibe una dirección', () => {
-    expect(formatearDireccion(null)).toBeNull();
-    expect(formatearDireccion('Cra 7' as unknown as Direccion)).toBeNull();
+  it.each(casos.formatearDatos)('datos: $descripcion', ({ entrada, corto, largo }) => {
+    const direccion = entrada as unknown as Direccion;
+
+    expect(formatearDireccion(direccion)).toBe(corto);
+    expect(formatearDireccion(direccion, { estilo: 'largo' })).toBe(largo);
   });
 
   it.each(parseables)('conserva los datos al volver a parsear: $entrada', ({ salida }) => {

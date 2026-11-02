@@ -1457,5 +1457,118 @@
       "corto": "Cra 7 # 32-16 Bloque 2 Torre 1 Mz 3",
       "largo": "Carrera 7 # 32 - 16 Bloque 2 Torre 1 Manzana 3"
     }
+  ],
+  "formatearDatos": [
+    { "descripcion": "null", "entrada": null, "corto": null, "largo": null },
+    { "descripcion": "texto", "entrada": "Cra 7", "corto": null, "largo": null },
+    { "descripcion": "número", "entrada": 7, "corto": null, "largo": null },
+    { "descripcion": "booleano", "entrada": true, "corto": null, "largo": null },
+    { "descripcion": "lista vacía", "entrada": [], "corto": null, "largo": null },
+    { "descripcion": "objeto vacío", "entrada": {}, "corto": null, "largo": null },
+    {
+      "descripcion": "sin tipo de vía",
+      "entrada": { "numeroVia": "7", "numeroCruce": "32", "placa": "16" },
+      "corto": null,
+      "largo": null
+    },
+    {
+      "descripcion": "sin número de vía",
+      "entrada": { "tipoVia": "Carrera", "numeroCruce": "32", "placa": "16" },
+      "corto": null,
+      "largo": null
+    },
+    {
+      "descripcion": "sin cruce",
+      "entrada": { "tipoVia": "Carrera", "numeroVia": "7", "placa": "16" },
+      "corto": null,
+      "largo": null
+    },
+    {
+      "descripcion": "sin placa",
+      "entrada": { "tipoVia": "Carrera", "numeroVia": "7", "numeroCruce": "32" },
+      "corto": null,
+      "largo": null
+    },
+    {
+      "descripcion": "tipo de vía desconocido",
+      "entrada": { "tipoVia": "Otro", "numeroVia": "7", "numeroCruce": "32", "placa": "16" },
+      "corto": null,
+      "largo": null
+    },
+    {
+      "descripcion": "el tipo de vía debe ser el nombre completo",
+      "entrada": { "tipoVia": "Cra", "numeroVia": "7", "numeroCruce": "32", "placa": "16" },
+      "corto": null,
+      "largo": null
+    },
+    {
+      "descripcion": "número de vía que no es texto",
+      "entrada": { "tipoVia": "Carrera", "numeroVia": 7, "numeroCruce": "32", "placa": "16" },
+      "corto": null,
+      "largo": null
+    },
+    {
+      "descripcion": "placa nula",
+      "entrada": { "tipoVia": "Carrera", "numeroVia": "7", "numeroCruce": "32", "placa": null },
+      "corto": null,
+      "largo": null
+    },
+    {
+      "descripcion": "solo los campos obligatorios",
+      "entrada": { "tipoVia": "Carrera", "numeroVia": "7", "numeroCruce": "32", "placa": "16" },
+      "corto": "Cra 7 # 32-16",
+      "largo": "Carrera 7 # 32 - 16"
+    },
+    {
+      "descripcion": "ignora campos opcionales nulos",
+      "entrada": {
+        "tipoVia": "Carrera",
+        "numeroVia": "7",
+        "letraVia": null,
+        "bisVia": null,
+        "letraBisVia": null,
+        "cuadranteVia": null,
+        "numeroCruce": "32",
+        "letraCruce": null,
+        "bisCruce": null,
+        "letraBisCruce": null,
+        "cuadranteCruce": null,
+        "placa": "16",
+        "complemento": null
+      },
+      "corto": "Cra 7 # 32-16",
+      "largo": "Carrera 7 # 32 - 16"
+    },
+    {
+      "descripcion": "ignora campos opcionales de otro tipo",
+      "entrada": {
+        "tipoVia": "Carrera",
+        "numeroVia": "7",
+        "letraVia": 5,
+        "bisVia": "true",
+        "letraBisVia": false,
+        "cuadranteVia": 1,
+        "numeroCruce": "32",
+        "letraCruce": [],
+        "bisCruce": 1,
+        "cuadranteCruce": {},
+        "placa": "16",
+        "complemento": 301
+      },
+      "corto": "Cra 7 # 32-16",
+      "largo": "Carrera 7 # 32 - 16"
+    },
+    {
+      "descripcion": "campos desconocidos",
+      "entrada": {
+        "tipoVia": "Calle",
+        "numeroVia": "7",
+        "numeroCruce": "32",
+        "placa": "16",
+        "barrio": "Centro"
+      },
+      "corto": "Cl 7 # 32-16",
+      "largo": "Calle 7 # 32 - 16"
+    }
   ]
 }
