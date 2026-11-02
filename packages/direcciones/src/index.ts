@@ -358,6 +358,11 @@ export function parsearDireccion(texto: string): Direccion | null {
   };
 }
 
+/** Una dirección armada a mano puede traer cualquier valor: lo que no sea texto se ignora. */
+function textoOpcional<T extends string>(valor: T | undefined): T | undefined {
+  return typeof valor === 'string' ? valor : undefined;
+}
+
 function formatearSegmento(segmento: Segmento, corto: boolean): string {
   const numeroYLetra =
     segmento.letra === undefined
@@ -386,7 +391,7 @@ function acortarComplemento(complemento: string): string {
  *
  * @param direccion Resultado de {@link parsearDireccion}.
  * @param opciones `estilo: 'corto'` (por defecto) o `estilo: 'largo'`.
- * @returns La dirección como texto, o `null` si recibe `null`. Nunca lanza errores.
+ * @returns La dirección como texto, o `null` si no recibe una dirección válida. Nunca lanza errores.
  *
  * @example
  * const direccion = parsearDireccion('KR 7 A # 32 - 16 APTO 301');
@@ -400,33 +405,43 @@ export function formatearDireccion(
 ): string | null {
   if (direccion === null || typeof direccion !== 'object') return null;
 
-  const corto = opciones.estilo !== 'largo';
   const tipo = VIAS.tiposVia.find(({ nombre }) => nombre === direccion.tipoVia);
+
+  if (
+    tipo === undefined ||
+    typeof direccion.numeroVia !== 'string' ||
+    typeof direccion.numeroCruce !== 'string' ||
+    typeof direccion.placa !== 'string'
+  ) {
+    return null;
+  }
+
+  const corto = opciones.estilo !== 'largo';
   const via = formatearSegmento(
     {
       numero: direccion.numeroVia,
-      letra: direccion.letraVia,
+      letra: textoOpcional(direccion.letraVia),
       bis: direccion.bisVia,
-      letraBis: direccion.letraBisVia,
-      cuadrante: direccion.cuadranteVia,
+      letraBis: textoOpcional(direccion.letraBisVia),
+      cuadrante: textoOpcional(direccion.cuadranteVia),
     },
     corto,
   );
   const cruce = formatearSegmento(
     {
       numero: direccion.numeroCruce,
-      letra: direccion.letraCruce,
+      letra: textoOpcional(direccion.letraCruce),
       bis: direccion.bisCruce,
-      letraBis: direccion.letraBisCruce,
-      cuadrante: direccion.cuadranteCruce,
+      letraBis: textoOpcional(direccion.letraBisCruce),
+      cuadrante: textoOpcional(direccion.cuadranteCruce),
     },
     corto,
   );
-  const nombreTipo = corto ? tipo?.corto : tipo?.nombre;
+  const nombreTipo = corto ? tipo.corto : tipo.nombre;
   const separador = corto ? '-' : ' - ';
   const base = `${nombreTipo} ${via} # ${cruce}${separador}${direccion.placa}`;
 
-  if (direccion.complemento === undefined) return base;
+  if (typeof direccion.complemento !== 'string') return base;
 
   return `${base} ${corto ? acortarComplemento(direccion.complemento) : direccion.complemento}`;
 }
