@@ -30,10 +30,11 @@ jobs:
         with:
           node-version: 24
           cache: pnpm
-          registry-url: https://registry.npmjs.org
       - run: pnpm install --frozen-lockfile
       # Con cambios pendientes abre el PR "Version Packages"; sin ellos, publica lo que falte en npm.
       # BOT_TOKEN hace que ese PR dispare el CI, cosa que GITHUB_TOKEN no permite.
+      # npm no necesita token: autoriza este workflow por su nombre (trusted publishing), con
+      # id-token: write. Si se renombra el archivo, hay que actualizarlo en cada paquete de npm.
       - uses: changesets/action@ae32849d5ba541f9ae29e40e22a623bc13562f51 # v2.1.2
         with:
           version-script: pnpm version-packages
@@ -44,5 +45,3 @@ jobs:
             Co-Authored-By: Claude <noreply@anthropic.com>
           pr-title: 'chore: versionar paquetes'
           github-token: ${{ secrets.BOT_TOKEN || github.token }}
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
