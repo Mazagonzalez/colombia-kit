@@ -5,8 +5,6 @@
 
 Utilidades open source para desarrolladores que trabajan con datos colombianos: NIT, DIVIPOLA y direcciones. Disponible para JavaScript/TypeScript y para PHP con integración para Laravel, con la misma lógica y los mismos resultados en ambos lenguajes.
 
-> **Estado:** los paquetes de JavaScript/TypeScript ya están publicados en npm. La versión de PHP está en desarrollo y todavía no está publicada en Packagist.
-
 ## Por qué existe
 
 Casi todos los proyectos colombianos terminan reescribiendo lo mismo: el dígito de verificación del NIT, la lista de municipios o un parser de direcciones que entienda que "Cra", "Kra" y "KR" son lo mismo. colombia-kit reúne esa lógica en un solo lugar, sin dependencias, con datos oficiales actualizados y con casos de prueba compartidos entre lenguajes.
