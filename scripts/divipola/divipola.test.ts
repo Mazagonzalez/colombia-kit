@@ -281,7 +281,7 @@ describe('versión, resumen y changeset', () => {
     expect(resumen).toContain('Revisa antes');
   });
 
-  it('el changeset declara el paquete, la versión y el conteo', () => {
+  it('el changeset declara los paquetes de JS y PHP, la versión y el conteo', () => {
     expect(
       textoChangeset({
         ...SIN_CAMBIOS,
@@ -289,7 +289,7 @@ describe('versión, resumen y changeset', () => {
         renombrados: [{ codigo: '1', antes: 'A', despues: 'B' }],
       }),
     ).toBe(
-      "---\n'@colombia-kit/divipola': minor\n---\n\nActualiza los datos de DIVIPOLA: 1 agregados, 1 renombrados.\n",
+      "---\n'@colombia-kit/divipola': minor\n'colombia-kit-php': minor\n---\n\nActualiza los datos de DIVIPOLA: 1 agregados, 1 renombrados.\n",
     );
   });
 });

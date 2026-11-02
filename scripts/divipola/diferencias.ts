@@ -143,5 +143,7 @@ export function textoChangeset(diferencias: Diferencias): string {
     otrosCambios.length > 0 && `${otrosCambios.length} otros cambios`,
   ].filter(Boolean);
 
-  return `---\n'@colombia-kit/divipola': ${tipoDeVersion(diferencias)}\n---\n\nActualiza los datos de DIVIPOLA: ${partes.join(', ')}.\n`;
+  const version = tipoDeVersion(diferencias);
+
+  return `---\n'@colombia-kit/divipola': ${version}\n'colombia-kit-php': ${version}\n---\n\nActualiza los datos de DIVIPOLA: ${partes.join(', ')}.\n`;
 }
