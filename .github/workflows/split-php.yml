@@ -1,0 +1,64 @@
+name: Split de PHP
+
+# Packagist necesita composer.json en la raíz de un repo, así que php/ se copia como raíz de
+# colombia-kit-php. Cada tag de Changesets para PHP se vuelve allá una versión de Composer.
+on:
+  push:
+    branches: [main]
+    paths: ['php/**']
+    tags: ['colombia-kit-php@*']
+
+concurrency:
+  group: split-php
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+env:
+  REPO_SPLIT: git@github.com:Mazagonzalez/colombia-kit-php.git
+
+jobs:
+  split:
+    name: Copiar php/ a colombia-kit-php
+    if: ${{ !github.event.repository.fork }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Preparar la deploy key
+        env:
+          SPLIT_DEPLOY_KEY: ${{ secrets.SPLIT_DEPLOY_KEY }}
+        run: |
+          if [ -z "$SPLIT_DEPLOY_KEY" ]; then
+            echo "::error::Falta el secreto SPLIT_DEPLOY_KEY."
+            exit 1
+          fi
+
+          clave="$RUNNER_TEMP/split-deploy-key"
+          (umask 077 && printf '%s\n' "$SPLIT_DEPLOY_KEY" | tr -d '\r' > "$clave")
+          echo "GIT_SSH_COMMAND=ssh -i $clave -o IdentitiesOnly=yes -o StrictHostKeyChecking=accept-new" >> "$GITHUB_ENV"
+
+      - run: git subtree split --prefix=php --branch=split-php
+
+      - name: Actualizar main
+        if: ${{ github.ref_type == 'branch' }}
+        run: git push "$REPO_SPLIT" split-php:refs/heads/main
+
+      # Solo el tag: main pudo avanzar después de este commit, y su propia ejecución lo actualiza.
+      - name: Crear la versión
+        if: ${{ github.ref_type == 'tag' }}
+        env:
+          TAG: ${{ github.ref_name }}
+        run: |
+          version="${TAG#colombia-kit-php@}"
+
+          if ! printf '%s' "$version" | grep -Eq '^[0-9]+\.[0-9]+\.[0-9]+(-[0-9A-Za-z.-]+)?$'; then
+            echo "::error::El tag $TAG no tiene una versión válida."
+            exit 1
+          fi
+
+          git push "$REPO_SPLIT" "split-php:refs/tags/v$version"
