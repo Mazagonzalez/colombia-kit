@@ -1,6 +1,6 @@
 {
   "name": "@colombia-kit/direcciones",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Parsea, normaliza y formatea direcciones colombianas.",
   "keywords": [
     "colombia",
